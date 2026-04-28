@@ -2,7 +2,7 @@
 
 > **Moments, Made To Keep.**
 
-A personal portfolio and showcase site by **Kartikeya** — a dark, glass-morphism aesthetic built with pure HTML, Tailwind CSS, and vanilla JavaScript. No frameworks, no build steps.
+A website for moments and programs that mean a lot to me and hold deep value. ✨
 
 ---
 

@@ -1,0 +1,1208 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>the Archive</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="Favicon/favicon-16x16.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="Favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="Favicon/favicon-96x96.png"
+    />
+    <link rel="icon" href="Favicon/favicon.ico" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="36x36"
+      href="Favicon/android-icon-36x36.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="48x48"
+      href="Favicon/android-icon-48x48.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="72x72"
+      href="Favicon/android-icon-72x72.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="Favicon/android-icon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="144x144"
+      href="Favicon/android-icon-144x144.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="Favicon/android-icon-192x192.png"
+    />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="Favicon/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="Favicon/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="Favicon/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="Favicon/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="Favicon/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="Favicon/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="Favicon/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="Favicon/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="Favicon/apple-icon-180x180.png"
+    />
+    <link rel="apple-touch-icon" href="Favicon/apple-icon-precomposed.png" />
+    <link rel="apple-touch-icon" href="Favicon/apple-icon.png" />
+
+    <meta name="msapplication-TileImage" content="Favicon/ms-icon-70x70.png" />
+    <meta
+      name="msapplication-TileImage"
+      content="Favicon/ms-icon-144x144.png"
+    />
+    <meta
+      name="msapplication-TileImage"
+      content="Favicon/ms-icon-150x150.png"
+    />
+    <meta
+      name="msapplication-TileImage"
+      content="Favicon/ms-icon-310x310.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <script
+      src="https://kit.fontawesome.com/542131e2b7.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+      body {
+        font-family: "Montserrat", sans-serif;
+        background-color: #10121b;
+      }
+    </style>
+
+    <style>
+      @keyframes shimmer {
+        0% {
+          background-position: -200% 0;
+        }
+        100% {
+          background-position: 200% 0;
+        }
+      }
+
+      .glass-animated {
+        position: relative;
+        background: linear-gradient(
+          130deg,
+          rgba(255, 255, 255, 0.05) 0%,
+          rgba(255, 255, 255, 0.1) 25%,
+          rgba(255, 255, 255, 0.2) 50%,
+          rgba(255, 255, 255, 0.1) 75%,
+          rgba(255, 255, 255, 0.05) 100%
+        );
+        background-size: 400% 100%;
+        animation: shimmer 10s ease-in-out infinite;
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 10px;
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease,
+          filter 0.3s ease;
+      }
+
+      .glass-animated:hover {
+        transform: scale(1.02);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+      }
+
+      .fade-element {
+        opacity: 1;
+        transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      /* ── carousel shell ── */
+      .carousel {
+        overflow: hidden;
+        border-radius: 24px;
+        height: 360px;
+        position: relative;
+        isolation: isolate;
+
+        border: 1px solid rgba(255, 255, 255, 0.07);
+        background: linear-gradient(
+          160deg,
+          rgba(255, 255, 255, 0.06) 0%,
+          rgba(255, 255, 255, 0.02) 60%,
+          rgba(140, 120, 255, 0.03) 100%
+        );
+        box-shadow:
+          0 0 0 1px rgba(255, 255, 255, 0.03) inset,
+          0 2px 4px rgba(255, 255, 255, 0.04) inset,
+          0 50px 100px -20px rgba(0, 0, 0, 0.7),
+          0 20px 40px -10px rgba(0, 0, 0, 0.4);
+      }
+
+      .carousel-track {
+        display: flex;
+        height: 100%;
+        transition: transform 0.8s cubic-bezier(0.76, 0, 0.24, 1);
+        z-index: 0;
+        position: relative;
+      }
+
+      .carousel-track img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        flex-shrink: 0;
+      }
+
+      /* ── nav arrows ── */
+      .carousel-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        background: rgba(10, 11, 18, 0.55);
+        color: rgba(255, 255, 255, 0.5);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        box-shadow:
+          0 2px 8px rgba(0, 0, 0, 0.35),
+          0 0 0 1px rgba(255, 255, 255, 0.03) inset;
+        transition:
+          background 0.2s,
+          border-color 0.2s,
+          color 0.2s,
+          transform 0.2s,
+          box-shadow 0.2s;
+      }
+      .carousel-btn:hover {
+        background: rgba(255, 255, 255, 0.09);
+        border-color: rgba(255, 255, 255, 0.2);
+        color: #fff;
+        transform: translateY(-50%) scale(1.1);
+        box-shadow:
+          0 4px 16px rgba(0, 0, 0, 0.5),
+          0 0 0 1px rgba(255, 255, 255, 0.06) inset;
+      }
+      .carousel-btn:active {
+        transform: translateY(-50%) scale(0.94);
+      }
+      .carousel-btn.prev {
+        left: 14px;
+      }
+      .carousel-btn.next {
+        right: 14px;
+      }
+      .carousel-btn svg {
+        width: 13px;
+        height: 13px;
+        stroke: currentColor;
+        fill: none;
+        stroke-width: 2.2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        pointer-events: none;
+      }
+
+      /* ── dot indicators + counter ── */
+      .carousel-controls {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        margin-top: 16px;
+      }
+      .carousel-counter {
+        font-size: 10px;
+        font-weight: 500;
+        color: rgba(255, 255, 255, 0.2);
+        letter-spacing: 0.12em;
+        min-width: 34px;
+        text-align: center;
+        font-family: "Montserrat", sans-serif;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.07);
+        padding: 3px 8px;
+        border-radius: 999px;
+      }
+      .carousel-dots {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+      }
+      .carousel-dot {
+        width: 5px;
+        height: 5px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.15);
+        cursor: pointer;
+        transition:
+          width 0.4s cubic-bezier(0.76, 0, 0.24, 1),
+          background 0.3s;
+        border: none;
+        padding: 0;
+        flex-shrink: 0;
+      }
+      .carousel-dot.active {
+        width: 24px;
+        background: #e7dac1;
+      }
+      .carousel-dot:hover:not(.active) {
+        background: rgba(255, 255, 255, 0.3);
+      }
+
+      .link-dock {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 20px;
+      }
+      .dock-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        padding: 8px 14px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        background: rgba(255, 255, 255, 0.05);
+        color: #a1a1aa;
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: 0.02em;
+        text-decoration: none;
+        transition:
+          background 0.15s,
+          color 0.15s,
+          border-color 0.15s;
+      }
+      .dock-btn:hover {
+        background: rgba(255, 255, 255, 0.1);
+        border-color: rgba(255, 255, 255, 0.25);
+        color: #fff;
+      }
+      .dock-btn svg {
+        width: 13px;
+        height: 13px;
+        flex-shrink: 0;
+        stroke: currentColor;
+        fill: none;
+        stroke-width: 1.8;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+    </style>
+  </head>
+  <body class="text-white">
+    <div class="god_nav">
+      <nav>
+        <div class="wrapper">
+          <div class="options">
+            <div class="logo">
+              <a href="#">Kartikeya</a>
+            </div>
+            <div id="openMobileMenu" class="mobile-menu-toggle">
+              <i class="fas fa-bars"></i>
+            </div>
+          </div>
+
+          <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#projects">Tribute</a></li>
+
+            <li>
+              <a href="https://github.com/KartikeyaLab" target="_blank"
+                >Github</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div id="mobileMenu" class="mobile-nav">
+      <div class="mobile-nav-header">
+        <button id="closeMobileMenu" class="close-btn">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <ul class="mobile-nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#projects">Tribute</a></li>
+
+        <li>
+          <a href="https://github.com/KartikeyaLab" target="_blank">Github</a>
+        </li>
+      </ul>
+    </div>
+
+    <section
+      class="flex-grow flex flex-col justify-center items-center text-center px-6 header fade-element"
+    >
+      <h2 class="text-6xl md:text-8xl font-bold mb-2 leading-none">
+        <span style="font-style: italic">the</span> Archive
+      </h2>
+      <p class="text-zinc-400 text-base md:text-lg fade-element">
+        Moments, Made To Keep
+      </p>
+
+      <div
+        class="flex flex-wrap justify-center items-center gap-4 md:gap-6 pr-6 pl-6 pt-5 pb-5 mt-4 rounded-[2rem] bg-white/10 backdrop-blur-md border border-white/20 shadow-lg max-w-3xl mx-auto"
+      >
+        <a
+          href="mailto:kartikeya30062009@gmail.com"
+          class="group relative w-12 h-12 md:w-14 md:h-14 flex items-center justify-center rounded-[1.2rem] bg-white/5 border border-white/20 backdrop-blur-md shadow hover:shadow-lg transition-all duration-300 hover:scale-110 hover:border-white/30"
+          title="Email me"
+        >
+          <div
+            class="absolute inset-0 rounded-full bg-white/10 opacity-0 group-hover:opacity-10 transition-opacity duration-300"
+          ></div>
+          <i
+            class="fa-solid fa-envelope text-white text-lg md:text-xl z-10 transition-transform duration-300 group-hover:scale-110"
+          ></i>
+        </a>
+
+        <a
+          href="https://www.youtube.com/@clever-ways"
+          target="_blank"
+          class="group relative w-12 h-12 md:w-14 md:h-14 flex items-center justify-center rounded-[1.2rem] bg-white/5 border border-white/20 backdrop-blur-md shadow hover:shadow-lg transition-all duration-300 hover:scale-110 hover:border-white/30"
+          title="Publish Website"
+        >
+          <div
+            class="absolute inset-0 rounded-full bg-white/10 opacity-0 group-hover:opacity-10 transition-opacity duration-300"
+          ></div>
+          <i
+            class="fa-brands fa-youtube text-white text-lg md:text-xl z-10 transition-transform duration-300 group-hover:scale-110"
+          ></i>
+        </a>
+
+        <a
+          href="https://github.com/KartikeyaLab"
+          target="_blank"
+          class="group relative w-12 h-12 md:w-14 md:h-14 flex items-center justify-center rounded-[1.2rem] bg-white/5 border border-white/20 backdrop-blur-md shadow hover:shadow-lg transition-all duration-300 hover:scale-110 hover:border-white/30"
+          title="GitHub"
+        >
+          <div
+            class="absolute inset-0 rounded-full bg-white/10 opacity-0 group-hover:opacity-10 transition-opacity duration-300"
+          ></div>
+          <i
+            class="fa-brands fa-github text-white text-lg md:text-xl z-10 transition-transform duration-300 group-hover:scale-110"
+          ></i>
+        </a>
+
+        <a
+          href="https://kartikeyalab.github.io/kartikeya/"
+          target="_blank"
+          class="group relative w-12 h-12 md:w-14 md:h-14 flex items-center justify-center rounded-[1.2rem] bg-white/5 border border-white/20 backdrop-blur-md shadow hover:shadow-lg transition-all duration-300 hover:scale-110 hover:border-white/30"
+          title="Website Builder"
+        >
+          <div
+            class="absolute inset-0 rounded-full bg-white/10 opacity-0 group-hover:opacity-10 transition-opacity duration-300"
+          ></div>
+          <i
+            class="fa-solid fa-house text-white text-lg md:text-xl z-10 transition-transform duration-300 group-hover:scale-110"
+          ></i>
+        </a>
+      </div>
+      <div class="transparent_overlay"></div>
+    </section>
+
+    <section
+      id="projects"
+      class="px-6 pt-[8rem] py-24 max-w-3xl mx-auto text-center"
+    >
+      <h3
+        class="text-5xl sm:text-6xl md:text-7xl lg:text-7xl font-bold mb-2 sm:mb-4"
+      >
+        Tribute
+      </h3>
+
+      <p class="dim_text mb-8 text-base">
+        To the Artists. Thank you for being an Artist!
+      </p>
+
+      <div
+        class="relative mx-auto overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl shadow-[0_20px_60px_rgba(0,0,0,0.4)]"
+      >
+        <div class="aspect-video w-full">
+          <iframe
+            class="w-full h-full"
+            src="https://www.youtube-nocookie.com/embed/npw_tVFO83E"
+            title="YouTube video player"
+            frameborder="0"
+            allow="
+              accelerometer;
+              autoplay;
+              clipboard-write;
+              encrypted-media;
+              gyroscope;
+              picture-in-picture;
+              web-share;
+            "
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto px-6 py-32 space-y-24">
+      <div class="text-center">
+        <h3 class="text-4xl md:text-5xl font-semibold text-white mb-4">
+          Creations
+        </h3>
+        <p class="text-zinc-400 text-sm md:text-base">
+          A Selection of My Work.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div class="space-y-5">
+          <p class="text-xs uppercase tracking-widest text-zinc-500">
+            Program 01
+          </p>
+
+          <h3 class="text-4xl md:text-5xl lg:text-6xl font-semibold text-white">
+            Computer Camera!
+          </h3>
+
+          <p class="text-zinc-400 leading-relaxed">
+            This is an inspiration from a
+            <a
+              style="text-decoration: underline"
+              target="_blank"
+              href="https://youtube.com/shorts/FIZI3k7mTvA?si=vDPck3tcL50K4xzT"
+              >YouTube video</a
+            >
+            I watched years ago as a kid, and it stayed in my mind. I wanted to
+            create something close to it, something that could capture the world
+            in the language of computers. It is beautiful!! More than that, the
+            most beautiful thing was people enjoying looking at themselves
+            through the lens of characters… and it was a good time, exhibiting
+            this program.
+          </p>
+
+          <div class="link-dock">
+            <a href="YOUR_FILES_LINK" class="dock-btn">
+              <svg viewBox="0 0 24 24">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
+              </svg>
+              Source code
+            </a>
+            <a href="YOUR_IMAGES_LINK" class="dock-btn">
+              <svg viewBox="0 0 24 24">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                <circle cx="8.5" cy="8.5" r="1.5" />
+                <polyline points="21 15 16 10 5 21" />
+              </svg>
+              Download images
+            </a>
+
+            <a href="YOUR_GITHUB_LINK" class="dock-btn" target="_blank">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                />
+              </svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+
+        <div style="position: relative">
+          <div class="carousel">
+            <div class="carousel-track" id="asciiTrack"></div>
+            <button class="carousel-btn prev" data-track="asciiTrack">
+              <svg viewBox="0 0 24 24">
+                <polyline points="15 18 9 12 15 6" />
+              </svg>
+            </button>
+            <button class="carousel-btn next" data-track="asciiTrack">
+              <svg viewBox="0 0 24 24">
+                <polyline points="9 18 15 12 9 6" />
+              </svg>
+            </button>
+          </div>
+          <div class="carousel-controls">
+            <span class="carousel-counter" id="asciiTrack-counter"></span>
+            <div class="carousel-dots" id="asciiTrack-dots"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div class="space-y-5">
+          <p class="text-xs uppercase tracking-widest text-zinc-500">
+            Program 02
+          </p>
+
+          <h3 class="text-4xl md:text-5xl lg:text-6xl font-semibold text-white">
+            Air Drawing!
+          </h3>
+
+          <p class="text-zinc-400 leading-relaxed">
+            This is a program through which you could draw on a computer screen
+            using your finger gestures in the air, and the camera would capture
+            your finger gestures to register the color, stroke, et cetera. The
+            idea behind this is really sophisticated. It was not an epiphany;
+            however,a collection of small ideas which somehow took shape in my
+            mind. Back when I was a kid, I listened to a
+
+            <a
+              style="text-decoration: underline"
+              target="_blank"
+              href="https://youtu.be/oHDaxSuAUtE?si=Zwk8nKW_3xh20-pj"
+              >keynote speech</a
+            >
+
+            by
+            <a
+              style="text-decoration: underline"
+              target="_blank"
+              href="https://www.youtube.com/@askvinh"
+              >Vinh Giang</a
+            >, which was beautiful. He performed a magic show in it, and I
+            performed the same magic in my school assembly. There was a line in
+            it:
+            <span style="font-style: italic">
+              "Perspective is power, collaboration is power, and innovation is
+              power, the moment you innovate outside your industry…"</span
+            >
+            something like that, and it stayed with me. However, I am not an
+            artist, my industry is computer science, technology, but I do have a
+            wonderful artist in my life who inspired me to create such a
+            beautiful program, to innovate outside my industry. And they say,
+            the idea is worth far more than the output…!
+          </p>
+
+          <div class="link-dock">
+            <a href="YOUR_FILES_LINK" class="dock-btn">
+              <svg viewBox="0 0 24 24">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
+              </svg>
+              Source code
+            </a>
+            <a href="YOUR_IMAGES_LINK" class="dock-btn">
+              <svg viewBox="0 0 24 24">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                <circle cx="8.5" cy="8.5" r="1.5" />
+                <polyline points="21 15 16 10 5 21" />
+              </svg>
+              Download images
+            </a>
+
+            <a href="YOUR_GITHUB_LINK" class="dock-btn" target="_blank">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                />
+              </svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+        <div style="position: relative">
+          <div class="carousel">
+            <div class="carousel-track" id="asciiTrack1"></div>
+            <button class="carousel-btn prev" data-track="asciiTrack1">
+              <svg viewBox="0 0 24 24">
+                <polyline points="15 18 9 12 15 6" />
+              </svg>
+            </button>
+            <button class="carousel-btn next" data-track="asciiTrack1">
+              <svg viewBox="0 0 24 24">
+                <polyline points="9 18 15 12 9 6" />
+              </svg>
+            </button>
+          </div>
+          <div class="carousel-controls">
+            <span class="carousel-counter" id="asciiTrack1-counter"></span>
+            <div class="carousel-dots" id="asciiTrack1-dots"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="message_for_you"
+      class="px-6 py-24 max-w-3xl mx-auto text-center"
+    >
+      <h3
+        class="text-5xl sm:text-6xl md:text-7xl lg:text-7xl font-bold mb-2 sm:mb-4"
+      >
+        In Kindness.
+      </h3>
+      <p class="dim_text mb-8 text-base">Stay as long as you like.</p>
+
+      <p
+        class="text-zinc-400 text-base md:text-lg leading-relaxed md:leading-loose mt-2 md:mt-3"
+      >
+        Thanks for being here.
+      </p>
+
+      <p
+        class="text-zinc-400 text-base md:text-lg leading-relaxed md:leading-loose mt-2 md:mt-3"
+      >
+        With love and quiet awe,
+      </p>
+      <div class="sign">Kartikeya</div>
+    </section>
+
+    <footer
+      id="footer"
+      class="relative w-full bg-black bg-opacity-90 text-white footer-section"
+    >
+      <div class="space_height_bottom"></div>
+      <div class="transparent_overlay_bottom"></div>
+      <div class="w-full border-b border-zinc-700"></div>
+
+      <div
+        class="flex flex-col md:flex-row justify-between gap-12 px-6 md:px-16 py-12"
+      >
+        <div class="w-full md:w-1/2">
+          <h2
+            class="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-normal"
+          >
+            About Me
+          </h2>
+          <p class="text-zinc-400 text-base md:text-lg mt-4">
+            I’m Kartikeya, I was born 282 years after the death of Sir Isaac
+            Newton.
+          </p>
+        </div>
+
+        <div class="w-full md:w-1/2">
+          <h2
+            class="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-normal"
+          >
+            Wanna talk?
+          </h2>
+          <p class="text-zinc-400 text-base md:text-lg mt-4">
+            Let’s build something awesome together, reach out now!
+            <a
+              href="https://kartikeyalab.github.io/kartikeya/#contact"
+              class="underline"
+              >Contact</a
+            >.
+          </p>
+        </div>
+      </div>
+
+      <div
+        class="max-w-7xl mx-auto px-4 py-6 text-center text-sm text-zinc-400"
+      >
+        © <span id="year"></span>
+        <span style="font-style: italic">the</span> Archive. All rights
+        reserved. Made with euphoria.
+      </div>
+    </footer>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const form = e.target;
+          const formData = new FormData(form);
+
+          for (let [key, value] of formData.entries()) {
+            console.log(`${key}: ${value}`);
+          }
+
+          formData.append("_captcha", "false");
+          formData.append("_template", "table");
+
+          fetch("https://formsubmit.co/kartikeya30062009@gmail.com", {
+            method: "POST",
+            body: formData,
+          })
+            .then((response) => {
+              console.log("Response Status:", response.status);
+              if (response.ok) {
+                console.log("Form submitted successfully");
+
+                window.location.href =
+                  "https://kartikeyalab.github.io/thankyou/";
+              } else {
+                console.error("Error in form submission:", response.statusText);
+                alert(
+                  "There was an error submitting your form. Please try again later.",
+                );
+              }
+            })
+            .catch((error) => {
+              console.error("Form submission error:", error);
+              alert("An unexpected error occurred.");
+            });
+        });
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const glowCards = document.querySelectorAll(".glow-card");
+
+        glowCards.forEach((card) => {
+          let mouseX = 0,
+            mouseY = 0;
+          let currentX = 0,
+            currentY = 0;
+
+          card.addEventListener("mousemove", (e) => {
+            const rect = card.getBoundingClientRect();
+            mouseX = e.clientX - rect.left;
+            mouseY = e.clientY - rect.top;
+          });
+
+          function animateGlow() {
+            currentX += (mouseX - currentX) * 0.1;
+            currentY += (mouseY - currentY) * 0.1;
+
+            card.style.setProperty("--x", `${currentX}px`);
+            card.style.setProperty("--y", `${currentY}px`);
+
+            requestAnimationFrame(animateGlow);
+          }
+
+          animateGlow();
+        });
+      });
+
+      let visibleCards = 4;
+      let defaultVisible = 4;
+
+      document.addEventListener("DOMContentLoaded", () => {
+        applyInitialView();
+        setupNav();
+      });
+
+      function applyInitialView() {
+        const cards = document.querySelectorAll(".project-card");
+        showCards(cards, visibleCards);
+        updateShowMoreButton(cards);
+      }
+
+      function showCards(cards, count) {
+        cards.forEach((card, index) => {
+          if (index < count) {
+            card.style.display = "block";
+
+            void card.offsetWidth;
+
+            card.classList.add("show");
+          } else {
+            card.style.display = "none";
+            card.classList.remove("show");
+          }
+        });
+      }
+
+      function updateShowMoreButton(cards) {
+        const btn = document.getElementById("showMoreBtn");
+        const total = cards.length;
+
+        if (visibleCards >= total) {
+          btn.textContent = "Show Less";
+          btn.onclick = () => {
+            visibleCards = defaultVisible;
+            showCards(cards, visibleCards);
+            updateShowMoreButton(cards);
+          };
+        } else {
+          const remaining = total - visibleCards;
+          btn.textContent = `Show More (${remaining} left)`;
+          btn.onclick = () => {
+            visibleCards += 4;
+            if (visibleCards > total) visibleCards = total;
+            showCards(cards, visibleCards);
+            updateShowMoreButton(cards);
+          };
+        }
+
+        btn.style.display = total > defaultVisible ? "block" : "none";
+      }
+
+      searchInput.addEventListener("input", () => {
+        const query = searchInput.value.trim().toLowerCase();
+        const cards = document.querySelectorAll(".project-card");
+        let matches = 0;
+
+        cards.forEach((card) => {
+          const text = card.textContent.toLowerCase();
+          const isVisible = text.includes(query);
+
+          if (isVisible) {
+            card.style.display = "block";
+            card.classList.add("show");
+            matches++;
+          } else {
+            card.style.display = "none";
+            card.classList.remove("show");
+          }
+        });
+
+        if (query === "") {
+          applyInitialView();
+        } else {
+          btn.style.display = "none";
+        }
+      });
+
+      function setupNav() {
+        const navLinks = document.querySelectorAll(".nav-link");
+        navLinks.forEach((link) => {
+          link.addEventListener("click", () => {
+            document.getElementById("menu-btn").checked = false;
+          });
+        });
+      }
+
+      document.querySelectorAll(".nav-link").forEach((link) => {
+        link.addEventListener("click", () => {
+          document.getElementById("close-btn").checked = true;
+        });
+      });
+
+      function focusSearchBar(event) {
+        event.preventDefault();
+        document.getElementById("searchInput").focus();
+      }
+
+      function waitForFontAwesomeIcons(timeout = 5000) {
+        return new Promise((resolve) => {
+          const start = performance.now();
+
+          const observer = new MutationObserver(() => {
+            const icons = document.querySelectorAll(
+              ".fa, .fas, .far, .fal, .fab, .fad",
+            );
+            const allIconsRendered = Array.from(icons).every((icon) =>
+              getComputedStyle(icon)
+                .fontFamily.toLowerCase()
+                .includes("fontawesome"),
+            );
+            if (allIconsRendered) {
+              observer.disconnect();
+              resolve();
+            }
+          });
+
+          observer.observe(document.body, {
+            childList: true,
+            subtree: true,
+          });
+
+          setTimeout(() => {
+            observer.disconnect();
+            resolve();
+          }, timeout);
+        });
+      }
+
+      window.onload = () => {
+        const loadingCircle = document.getElementById("loading-circle");
+        const content = document.querySelector(".container_universal_hidden");
+
+        if (loadingCircle) loadingCircle.classList.add("hidden");
+
+        setTimeout(() => {
+          if (content) content.classList.add("show");
+        }, 500);
+      };
+
+      let lastScrollY = window.scrollY;
+
+      function updateFadeOpacity() {
+        const elements = document.querySelectorAll(".fade-element");
+        const currentScrollY = window.scrollY;
+        const scrollingUp = currentScrollY < lastScrollY;
+
+        elements.forEach((el) => {
+          const scrollOffset = currentScrollY;
+
+          let opacity;
+          if (scrollingUp) {
+            opacity = Math.min(1, (500 - scrollOffset) / 80);
+          } else {
+            opacity = Math.max(0, (250 - scrollOffset) / 80);
+          }
+
+          el.style.opacity = opacity.toFixed(2);
+        });
+
+        lastScrollY = currentScrollY;
+      }
+
+      window.addEventListener("scroll", updateFadeOpacity);
+      window.addEventListener("resize", updateFadeOpacity);
+      document.addEventListener("DOMContentLoaded", updateFadeOpacity);
+
+      const openBtn = document.getElementById("openMobileMenu");
+      const closeBtn = document.getElementById("closeMobileMenu");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const navLinks = mobileMenu.querySelectorAll("a");
+
+      openBtn.addEventListener("click", () => {
+        mobileMenu.classList.add("active");
+      });
+
+      closeBtn.addEventListener("click", () => {
+        mobileMenu.classList.remove("active");
+      });
+
+      navLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.remove("active");
+        });
+      });
+
+      async function autoUpdateVersions() {
+        const repo = "KartikeyaLab/CMS";
+        const versionElements = document.querySelectorAll(".version-update");
+
+        if (versionElements.length === 0) return;
+
+        try {
+          const response = await fetch(
+            `https://api.github.com/repos/${repo}/releases/latest`,
+          );
+          const data = await response.json();
+
+          if (!data.tag_name) return;
+
+          versionElements.forEach((el) => {
+            el.textContent = data.tag_name;
+          });
+        } catch (error) {
+          console.error("Failed to update versions:", error);
+          // Fallback: keep existing text
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", autoUpdateVersions);
+    </script>
+    <script>
+      window.addEventListener("scroll", () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.body.scrollHeight - window.innerHeight;
+        const scrollPercent = (scrollTop / docHeight) * 100;
+
+        document
+          .querySelector("nav")
+          .style.setProperty("--scroll-width", scrollPercent + "%");
+
+        document
+          .querySelector("nav")
+          .style.setProperty("--scroll-width", scrollPercent + "%");
+
+        document
+          .querySelector("nav")
+          .style.setProperty("--scroll-width", scrollPercent + "%");
+
+        document
+          .querySelector("nav")
+          .style.setProperty("--scroll-width", scrollPercent + "%");
+
+        document
+          .querySelector("nav")
+          .style.setProperty("--scroll-width", scrollPercent + "%");
+
+        document
+          .querySelector("nav")
+          .style.setProperty("--scroll-width", scrollPercent + "%");
+
+        document
+          .querySelector("nav")
+          .style.setProperty("--scroll-width", scrollPercent + "%");
+
+        document
+          .querySelector("nav")
+          .style.setProperty("--scroll-width", scrollPercent + "%");
+
+        document
+          .querySelector("nav")
+          .style.setProperty("--scroll-width", scrollPercent + "%");
+
+        document
+          .querySelector("nav")
+          .style.setProperty("--scroll-width", scrollPercent + "%");
+
+        document
+          .querySelector("nav")
+          .style.setProperty("--scroll-width", scrollPercent + "%");
+
+        document
+          .querySelector("nav")
+          .style.setProperty("--scroll-width", scrollPercent + "%");
+
+        document
+          .querySelector("nav")
+          .style.setProperty("--scroll-width", scrollPercent + "%");
+
+        document
+          .querySelector("nav")
+          .style.setProperty("--scroll-width", scrollPercent + "%");
+
+        document
+          .querySelector("nav")
+          .style.setProperty("--scroll-width", scrollPercent + "%");
+
+        document
+          .querySelector("nav")
+          .style.setProperty("--scroll-width", scrollPercent + "%");
+
+        document
+          .querySelector("nav")
+          .style.setProperty("--scroll-width", scrollPercent + "%");
+
+        document
+          .querySelector("nav")
+          .style.setProperty("--scroll-width", scrollPercent + "%");
+
+        document
+          .querySelector("nav")
+          .style.setProperty("--scroll-width", scrollPercent + "%");
+
+        document
+          .querySelector("nav")
+          .style.setProperty("--scroll-width", scrollPercent + "%");
+      });
+
+      function createCarousel(trackId, folder, totalImages, totalGifs) {
+        const track = document.getElementById(trackId);
+        const slides = [];
+
+        for (let i = 1; i <= totalImages; i++) {
+          const img = document.createElement("img");
+          img.src = `${folder}/img_${String(i).padStart(3, "0")}.png`;
+          slides.push(img);
+          track.appendChild(img);
+        }
+
+        for (let i = 1; i <= totalGifs; i++) {
+          const gif = document.createElement("img");
+          gif.src = `${folder}/vid_${String(i).padStart(3, "0")}.gif`;
+          slides.push(gif);
+          track.appendChild(gif);
+        }
+
+        const total = slides.length;
+        let index = 0;
+        let timer;
+
+        const dotsEl = document.getElementById(trackId + "-dots");
+        const counter = document.getElementById(trackId + "-counter");
+
+        for (let i = 0; i < total; i++) {
+          const d = document.createElement("button");
+          d.className = "carousel-dot" + (i === 0 ? " active" : "");
+          d.onclick = () => goTo(i);
+          dotsEl.appendChild(d);
+        }
+
+        function goTo(n) {
+          index = (n + total) % total;
+          track.style.transform = `translateX(-${index * 100}%)`;
+          dotsEl.querySelectorAll(".carousel-dot").forEach((d, i) => {
+            d.className = "carousel-dot" + (i === index ? " active" : "");
+          });
+          counter.textContent = `${index + 1} / ${total}`;
+          resetTimer();
+        }
+
+        function resetTimer() {
+          clearInterval(timer);
+          timer = setInterval(() => goTo(index + 1), 3500);
+        }
+
+        // wire up the prev/next buttons
+        const wrap =
+          track.closest("[style]") || track.parentElement.parentElement;
+        wrap.querySelectorAll(".carousel-btn").forEach((btn) => {
+          btn.onclick = () =>
+            goTo(index + (btn.classList.contains("next") ? 1 : -1));
+        });
+
+        goTo(0);
+      }
+
+      createCarousel("asciiTrack", "Pictures", 19, 3);
+      createCarousel("asciiTrack1", "Drawing", 15, 0);
+    </script>
+  </body>
+</html>

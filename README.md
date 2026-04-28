@@ -14,16 +14,6 @@ A website for moments and programs that mean a lot to me and hold deep value. âœ
 
 ---
 
-## What's Inside
-
-| Section | Description |
-|---|---|
-| **Hero** | Animated header with social dock (Email, YouTube, GitHub, Portfolio) |
-| **Tribute** | Embedded YouTube video dedicated to the artists who inspired this work |
-| **Creations** | Showcase of two computer vision projects with image/GIF carousels |
-| **In Kindness** | A personal closing note |
-| **Footer** | About + contact |
-
 ### Featured Projects
 
 **Program 01 â€” Computer Camera**

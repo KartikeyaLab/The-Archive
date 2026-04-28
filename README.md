@@ -10,6 +10,8 @@ A personal portfolio and showcase site by **Kartikeya** — a dark, glass-morphi
 
 **[kartikeyalab.github.io/the-archive](https://kartikeyalab.github.io/the-archive/)** *(update with your actual URL)*
 
+<img src="https://raw.githubusercontent.com/KartikeyaLab/The-Archive/main/Screenshot.png" width="100%" />
+
 ---
 
 ## What's Inside

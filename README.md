@@ -8,7 +8,7 @@ A website for moments and programs that mean a lot to me and hold deep value. âœ
 
 ## Live Site
 
-**[the Archive](https://kartikeyalab.github.io/The-Archive/)**
+**[*the* Archive](https://kartikeyalab.github.io/The-Archive/)**
 
 <img src="https://raw.githubusercontent.com/KartikeyaLab/The-Archive/main/Screenshot.png" width="100%" />
 

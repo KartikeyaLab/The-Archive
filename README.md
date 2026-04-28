@@ -21,7 +21,7 @@ An ASCII art camera that renders the world through the language of characters. I
 [Download Source](https://github.com/KartikeyaLab/Computer-Camera/archive/refs/heads/main.zip) · [GitHub Repo](https://github.com/KartikeyaLab/Computer-Camera)
 
 **Program 02 — Air Drawing**
-Draw on screen using mid-air finger gestures — the camera tracks your hand to register color, stroke, and position. Born from an idea about innovating outside your own industry.
+Draw on screen using mid-air finger gestures, the camera tracks your hand to register color, stroke, and position. Inspired by a wonderful Artist ✨
 [Download Source](https://github.com/KartikeyaLab/Air-Drawing/archive/refs/heads/main.zip) · [GitHub Repo](https://github.com/KartikeyaLab/Air-Drawing)
 
 ---

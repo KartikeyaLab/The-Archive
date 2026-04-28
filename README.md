@@ -26,54 +26,6 @@ Draw on screen using mid-air finger gestures — the camera tracks your hand to 
 
 ---
 
-## Tech Stack
-
-- **HTML5** — semantic, single-file structure
-- **[Tailwind CSS](https://tailwindcss.com/)** (CDN) — utility-first styling
-- **Vanilla JavaScript** — carousels, scroll effects, mobile nav, fade animations
-- **[Font Awesome](https://fontawesome.com/)** — icons
-- **[Google Fonts — Montserrat](https://fonts.google.com/specimen/Montserrat)** — typography
-- **[Lottie Player](https://lottiefiles.com/web-player)** — animation support
-
----
-
-## Design Details
-
-- **Dark background** `#10121b` with glass-morphism cards
-- **Shimmer animation** on feature cards (`@keyframes shimmer`)
-- **Scroll-aware fade** on hero elements
-- **Auto-advancing carousel** (3.5s interval) with dot indicators and prev/next arrows
-- **Responsive nav** with mobile slide-in menu
-- **Scroll progress bar** on the navbar
-
----
-
-## File Structure
-
-```
-/
-├── index.html          # Main page
-├── style.css           # Custom styles (nav, mobile menu, layout)
-├── Favicon/            # All favicon sizes (iOS, Android, Windows)
-├── Pictures/           # Computer Camera carousel images (img_001–019, vid_001–003)
-└── Drawing/            # Air Drawing carousel images (img_001–015)
-```
-
-> **Carousel convention:** Images are named `img_001.png`, `img_002.png`, … and GIFs are named `vid_001.gif`, `vid_002.gif`, …
-
----
-
-## Local Development
-
-No build step needed. Just open the file:
-
-```bash
-git clone https://github.com/KartikeyaLab/the-archive.git
-cd the-archive
-open index.html   # or use Live Server in VS Code
-```
-
----
 
 ## Connect
 

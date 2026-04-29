@@ -333,9 +333,17 @@
         stroke-linecap: round;
         stroke-linejoin: round;
       }
+
+      #stars {
+        position: fixed;
+        inset: 0;
+        z-index: -1; /* sits behind everything */
+        pointer-events: none;
+      }
     </style>
   </head>
   <body class="text-white">
+    <canvas id="stars"></canvas>
     <div class="god_nav">
       <nav>
         <div class="wrapper">
@@ -910,6 +918,58 @@
 
       createCarousel("asciiTrack", "Pictures", 19, 3);
       createCarousel("asciiTrack1", "Drawing", 15, 0);
+    </script>
+    <script>
+      const canvas = document.getElementById("stars");
+      const ctx = canvas.getContext("2d");
+
+      let stars = [];
+      const STAR_COUNT = 100;
+
+      function resize() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      }
+
+      function createStars() {
+        stars = [];
+        for (let i = 0; i < STAR_COUNT; i++) {
+          stars.push({
+            x: Math.random() * canvas.width,
+            y: Math.random() * canvas.height,
+
+            r: Math.random() * 0.8 + 0.2, // 🔥 smaller stars
+
+            o: Math.random() * 0.3 + 0.05, // 🔥 very low opacity
+
+            speed: Math.random() * 0.005, // 🔥 much slower twinkle
+          });
+        }
+      }
+      function draw() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        for (let s of stars) {
+          s.o += s.speed;
+          if (s.o > 1 || s.o < 0) s.speed *= -1;
+
+          ctx.beginPath();
+          ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(255,255,255,${s.o})`;
+          ctx.fill();
+        }
+
+        requestAnimationFrame(draw);
+      }
+
+      window.addEventListener("resize", () => {
+        resize();
+        createStars();
+      });
+
+      resize();
+      createStars();
+      draw();
     </script>
   </body>
 </html>
